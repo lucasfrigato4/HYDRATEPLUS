@@ -1,4 +1,5 @@
 from src.storage import load_data, save_data
+from src.weather import get_current_temperature, hydration_tip_by_weather
 
 def add_water(amount):
     if amount <= 0:
@@ -37,6 +38,7 @@ def menu():
         print("1 - Adicionar água")
         print("2 - Definir meta")
         print("3 - Ver status")
+        print("4 - Ver clima e dica de hidratação")
         print("0 - Sair")
 
         op = input("Escolha: ")
@@ -51,6 +53,13 @@ def menu():
 
         elif op == "3":
             show_status()
+        
+        elif op == "4":
+            temperature = get_current_temperature()
+            tip = hydration_tip_by_weather(temperature)
+
+            print(f"\n🌡️ Temperatura atual: {temperature}°C")
+            print(tip)
 
         elif op == "0":
             break
