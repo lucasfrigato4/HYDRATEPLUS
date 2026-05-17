@@ -26,6 +26,19 @@ Tudo isso por meio de uma interface leve e acessível via terminal.
 
 ---
 
+## 🌤️ Integração com API Pública
+
+O projeto agora possui integração com a API pública **Open-Meteo**, permitindo consultar a temperatura atual em tempo real.
+
+Com base nas condições climáticas, o sistema fornece recomendações adicionais de hidratação para o usuário, tornando a aplicação mais dinâmica e contextualizada.
+
+Exemplo:
+
+* Dias muito quentes → reforço na hidratação 🔥
+* Temperaturas amenas → manutenção da meta diária 💧
+
+---
+
 ## 👥 Público-Alvo
 
 * Estudantes
@@ -40,6 +53,9 @@ Tudo isso por meio de uma interface leve e acessível via terminal.
 * ✅ Definir meta diária
 * ✅ Visualizar progresso atual
 * ✅ Validação de entradas inválidas
+* ✅ Consulta de temperatura em tempo real via API pública
+* ✅ Recomendação de hidratação baseada no clima
+* ✅ Testes automatizados de integração
 
 ---
 
@@ -48,6 +64,8 @@ Tudo isso por meio de uma interface leve e acessível via terminal.
 * Python 3.11
 * Pytest (testes automatizados)
 * Ruff (linting/análise estática)
+* Requests (consumo de API HTTP)
+* Open-Meteo API
 * Git e GitHub
 * GitHub Actions (CI)
 
@@ -84,6 +102,11 @@ python -m src.app
 python -m pytest
 ```
 
+Os testes automatizados incluem:
+
+* Testes unitários
+* Teste de integração com mock da API Open-Meteo
+
 ---
 
 ## 🧹 Executar Lint
@@ -104,16 +127,18 @@ Este projeto segue versionamento semântico:
 
 ## 📁 Estrutura do Projeto
 
-```
+```text
 HydratePlus/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
 ├── src/
 │   ├── app.py
-│   └── storage.py
+│   ├── storage.py
+│   └── weather.py
 ├── tests/
-│   └── test_app.py
+│   ├── test_app.py
+│   └── test_weather.py
 ├── .gitignore
 ├── data.json
 ├── README.md
@@ -132,5 +157,4 @@ Lucas Frigato
 ## 🔗 Repositório
 
 https://github.com/lucasfrigato4/HYDRATEPLUS.git
-
 ---
