@@ -1,5 +1,7 @@
 # 💧 HydratePlus (CLI)
+## 🔗 Execução da Aplicação
 
+Por se tratar de uma aplicação CLI, a execução é realizada localmente via terminal conforme instruções abaixo.
 ## 📌 Descrição do Projeto
 
 O **HydratePlus** é uma aplicação simples em linha de comando (CLI) desenvolvida em Python com o objetivo de ajudar usuários a monitorar e melhorar seus hábitos de hidratação diária.
